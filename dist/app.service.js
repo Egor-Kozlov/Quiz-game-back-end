@@ -8,17 +8,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppService = void 0;
 const common_1 = require("@nestjs/common");
+const randomKey_1 = require("./modules/randomKey");
 let AppService = exports.AppService = class AppService {
     getHello() {
         return 'Hello World!';
     }
     getRandomKey() {
-        const randomKey = Math.floor(Math.random() * 10000000);
-        const timeOfCreation = new Date().getTime();
-        return {
-            value: randomKey,
-            timeOfCreation: timeOfCreation,
-        };
+        return (0, randomKey_1.randomKey)();
     }
 };
 exports.AppService = AppService = __decorate([
