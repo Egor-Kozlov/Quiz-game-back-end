@@ -3,5 +3,8 @@ export declare class AppController {
     private readonly appService;
     constructor(appService: AppService);
     getHello(): string;
-    getRandomKey(): number;
+    getRandomKey(): {
+        value: number;
+        timeOfCreation: any;
+    };
 }
