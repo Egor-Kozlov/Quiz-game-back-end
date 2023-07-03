@@ -1,4 +1,5 @@
 import { Injectable } from '@nestjs/common';
+import {randomKey} from './modules/randomKey';
 
 @Injectable()
 export class AppService {
@@ -8,11 +9,6 @@ export class AppService {
 
   getRandomKey(): {value: number, timeOfCreation: any} {
     // return number with length of 7
-    const randomKey = Math.floor(Math.random() * 10000000);
-    const timeOfCreation = new Date().getTime();
-    return {
-      value: randomKey,
-      timeOfCreation: timeOfCreation,
-    };
+    return randomKey();
   }
 }
