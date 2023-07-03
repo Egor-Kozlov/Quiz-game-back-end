@@ -13,7 +13,12 @@ let AppService = exports.AppService = class AppService {
         return 'Hello World!';
     }
     getRandomKey() {
-        return Math.floor(Math.random() * 10000000);
+        const randomKey = Math.floor(Math.random() * 10000000);
+        const timeOfCreation = new Date().getTime();
+        return {
+            value: randomKey,
+            timeOfCreation: timeOfCreation,
+        };
     }
 };
 exports.AppService = AppService = __decorate([

@@ -11,7 +11,7 @@ export class AppController {
   }
 
   @Get('get-key')
-  getRandomKey(): number {
+  getRandomKey(): {value: number, timeOfCreation: any} {
     return this.appService.getRandomKey();
   }
 }

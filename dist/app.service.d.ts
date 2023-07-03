@@ -1,4 +1,7 @@
 export declare class AppService {
     getHello(): string;
-    getRandomKey(): number;
+    getRandomKey(): {
+        value: number;
+        timeOfCreation: any;
+    };
 }

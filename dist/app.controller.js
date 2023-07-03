@@ -33,7 +33,7 @@ __decorate([
     (0, common_1.Get)('get-key'),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
-    __metadata("design:returntype", Number)
+    __metadata("design:returntype", Object)
 ], AppController.prototype, "getRandomKey", null);
 exports.AppController = AppController = __decorate([
     (0, common_1.Controller)(),
