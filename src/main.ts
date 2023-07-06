@@ -1,11 +1,11 @@
+import 'dotenv/config'
 import { NestFactory } from '@nestjs/core';
-import { AppModule } from './app.module';
-
+import { AppModule } from './app.module';;
+const mongodbUrl = process.env.MONGODB_URL;
 const { MongoClient, ServerApiVersion } = require('mongodb');
 
-const uri = "mongodb+srv://egorSkozlov:19982010xbox@cluster0.lxveyvq.mongodb.net/?retryWrites=true&w=majority";
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
-const client = new MongoClient(uri, {
+const client = new MongoClient(mongodbUrl, {
   serverApi: {
     version: ServerApiVersion.v1,
     strict: true,

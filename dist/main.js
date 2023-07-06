@@ -1,10 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+require("dotenv/config");
 const core_1 = require("@nestjs/core");
 const app_module_1 = require("./app.module");
+;
+const mongodbUrl = process.env.MONGODB_URL;
 const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://egorSkozlov:19982010xbox@cluster0.lxveyvq.mongodb.net/?retryWrites=true&w=majority";
-const client = new MongoClient(uri, {
+const client = new MongoClient(mongodbUrl, {
     serverApi: {
         version: ServerApiVersion.v1,
         strict: true,
